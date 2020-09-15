@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  web:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_HOSTS: 0.0.0.0
+      PMA_PASSWORD: ''
+      UPLOAD_LIMIT: 3000000000
+    network_mode: host
+    volumes:
+      - ./php.ini:/usr/local/etc/php/php.ini
