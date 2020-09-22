@@ -11,5 +11,6 @@ services:
       PMA_PASSWORD: ''
       UPLOAD_LIMIT: 3000000000
     network_mode: host
+    restart: always
     volumes:
       - ./php.ini:/usr/local/etc/php/php.ini
