@@ -8,7 +8,9 @@ services:
       PMA_PORT: 3306
       PMA_HOSTS: host.docker.internal
       UPLOAD_LIMIT: 3000000000
-    network_mode: host
+    ports:
+      - 8081:80
+    #network_mode: host
     restart: always
     volumes:
       - ./php.ini:/usr/local/etc/php/php.ini
